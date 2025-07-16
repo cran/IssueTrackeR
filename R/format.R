@@ -1,4 +1,3 @@
-
 #' @title Round a timestamp to the inferior integer
 #'
 #' @description
@@ -18,6 +17,12 @@
 #' @returns a \code{POSIXct} object with rounded \code{double} value.
 #'
 #' @keywords internal
+#' @noRd
+#'
+#' @examples
+#'
+#' format_timestamp(1743694674.9)
+#' format_timestamp(Sys.Date())
 #'
 format_timestamp <- function(x) {
     output <- x |>

@@ -5,8 +5,11 @@ booleans
 Booleans
 
 Codecov
+CodeFactor
 
+GH
 gh
+tidyverse
 
 yaml
 CMD
@@ -19,3 +22,4 @@ signaled
 subassignment
 Subassignment
 subsettable
+nonzero

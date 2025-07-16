@@ -1,9 +1,5 @@
 test_that("format_timestamp works", {
-
-    output_expected <- 1743694674.0
-    class(output_expected) <- c("POSIXct", "POSIXt")
-    attr(x = output_expected, which = "tzone") <- ""
-
+    output_expected <- as.POSIXct(1743694674.0, origin = "1970-01-01")
     testthat::expect_identical(
         object = IssueTrackeR:::format_timestamp(1743694674.9),
         expected = output_expected
