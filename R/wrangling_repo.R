@@ -13,13 +13,25 @@
 #'
 #' @examples
 #'
-#' \donttest{
+#' \dontrun{
 #' get_all_repos("rjdverse")
 #' }
 #'
 #' @export
-get_all_repos <- function(owner, public = TRUE, private = TRUE) {
+get_all_repos <- function(
+    owner,
+    public = TRUE,
+    private = TRUE,
+    verbose = TRUE
+) {
+    if (verbose) {
+        cat("Try to find all repositories from ", owner, "...", sep = "")
+    }
+
     if (isFALSE(public | private)) {
+        if (verbose) {
+            cat(" Done!\n")
+        }
         return(NULL)
     }
 
@@ -79,5 +91,8 @@ get_all_repos <- function(owner, public = TRUE, private = TRUE) {
 
     list_repo <- unique(list_repo)
 
+    if (verbose) {
+        cat(" Done!\n")
+    }
     return(list_repo)
 }
