@@ -10,6 +10,30 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+* New class `MilestonesTB` for milestones objects
+* Number of issues open or closed in each milestones
+* New function to plot issues
+* New checked case if internet connection is down
+* Display of the default options at the start of the package [#7](https://github.com/TanguyBarthelemy/IssueTrackeR/issues/7)
+* New function `reset_options` to reset the default options [#4](https://github.com/TanguyBarthelemy/IssueTrackeR/issues/4)
+* Argument `with_labels` display the labels with the issue in a summary call of a list of issues
+
+### Changed
+
+* Removed progress bar in `gh::gh()` calls
+* `update_database()` updates all the milestones (closed and open)
+* `write_issues_to_dataset()`, `write_labels_to_dataset()` and `write_milestones_to_dataset()` are regrouped into `write_to_dataset()`
+* `get_issues()` accept now several repos to look for issues. Argument `repo` can be a vector of several repos.
+
+### Fixed
+
+* Removed a warning due to the use of `ignore.case = TRUE` and `fixed = TRUE` simultaneously in `grepl()`
+
+
+## [1.3.1] - 2025-10-27
+
+### Added
+
 * New function to convert NULL value to default value
 * Add information in milestones datasets
 * `get_nbr_comments()`: Function to compute the number of comments
@@ -99,7 +123,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 * New CHANGELOG (`NEWS.md`)
 * Documentation for `logic_reducer()`, `no_milestones()`, `vgrepl()` and `simple_sort`
 
-[Unreleased]: https://github.com/TanguyBarthelemy/IssueTrackeR/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/TanguyBarthelemy/IssueTrackeR/compare/v1.3.1...HEAD
+[1.3.1]: https://github.com/TanguyBarthelemy/IssueTrackeR/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/TanguyBarthelemy/IssueTrackeR/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/TanguyBarthelemy/IssueTrackeR/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/TanguyBarthelemy/IssueTrackeR/compare/v1.1.0...v1.1.1
