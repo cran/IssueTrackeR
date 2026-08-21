@@ -15,19 +15,20 @@
 #'
 #' @details
 #' The function uses the **relative luminance** formula derived from the
-#' [WCAG](https://www.w3.org/WAI/WCAG21/quickref/) (Web Content Accessibility
-#' Guidelines) to calculate the *perceived brightness* of the colour.
+#' [WCAG](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1) (Web Content
+#' Accessibility Guidelines) to calculate the *perceived brightness* of the
+#' colour.
 #' If the luminance is below a 123 (on a scale of 0-255), the colour is
 #' considered dark.
 #'
 #' @importFrom grDevices col2rgb
 #'
 #' @examples
-#' # Check a hexadecimal color
+#' # Check a hexadecimal colour
 #' IssueTrackeR:::isDark("#000000")  # black is dark
 #' IssueTrackeR:::isDark("#FFFFFF")  # white is light
 #'
-#' # Check a named color
+#' # Check a named colour
 #' IssueTrackeR:::isDark("navy")
 #' IssueTrackeR:::isDark("yellow")
 #'

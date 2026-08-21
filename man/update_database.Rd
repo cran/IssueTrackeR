@@ -49,9 +49,9 @@ Update the different local database (issues, labels and milestones) with the
 online reference.
 }
 \examples{
-
-\dontrun{
-update_database(dataset_dir = tempdir())
+\donttest{
+if (gh::gh_token_exists() && gh::gh_rate_limit()$remaining > 0) {
+    update_database(dataset_dir = tempdir())
 }
-
+}
 }
